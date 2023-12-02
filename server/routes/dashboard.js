@@ -1,5 +1,5 @@
-const MediaFile = require("../modals/MediaFile"); // Import your Mongoose model
-const { Config } = require("../config"); // Import admin credentials
+const MediaFile = require("../modals/MediaFile"); 
+const { Config } = require("../config"); 
 
 const dashboard = async (req, res) => {
   const { username, password } = req.body;

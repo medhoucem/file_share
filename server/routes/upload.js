@@ -1,5 +1,5 @@
 const express = require("express");
-const MediaFile = require("../modals/MediaFile"); // Assuming you have your MediaFile model defined
+const MediaFile = require("../modals/MediaFile"); 
 const { Config } = require("../config");
 
 const UploadRoute = async (req, res) => {
@@ -8,7 +8,7 @@ const UploadRoute = async (req, res) => {
       return res.status(400).send("No files were uploaded.");
     }
 
-    const uploadedFile = req.files.file; // Assuming the input field is named 'file'
+    const uploadedFile = req.files.file; 
 
     // Generate a unique filename
     const uniqueFileName = Date.now() + "-" + uploadedFile.name;
@@ -21,7 +21,7 @@ const UploadRoute = async (req, res) => {
     const mediaFile = new MediaFile({
       filename: uploadedFile.name,
       filesize: uploadedFile.size,
-      path: uniqueFileName,
+      path: uploadPath,
       visitcount: 0,
     });
 

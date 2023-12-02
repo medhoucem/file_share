@@ -16,7 +16,7 @@ const Footer = () => {
 
   return (
     <footer style={styles.footer}>
-      &copy; {currentYear} {Config.APP_NAME}. All rights reserved.
+      &copy; {currentYear} {Config.APP_NAME}. nahhh you can take it .
     </footer>
   );
 };

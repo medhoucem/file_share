@@ -1,4 +1,4 @@
-import { Route, Router, Routes, BrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import HomePage from "./pages/Homepage";
 import Upload from "./pages/UploadPage";
@@ -10,14 +10,16 @@ import Dashboard from "./pages/Dashboard";
 function App() {
   return (
     <div className="container">
+
+
       <BrowserRouter>
-        <Header />
+          <Header />
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/view/:id" element={<ViewFile />} />
           <Route path="/adminpanel">
-            <Route path="" element={<Dashboard />} />
+          <Route path="" element={<Dashboard />} />
             <Route path="login" element={<AdminLogin />} />
           </Route>
         </Routes>
